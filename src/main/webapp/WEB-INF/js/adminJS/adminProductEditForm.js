@@ -390,7 +390,7 @@ style="position:absolute;
 				</svg>
 				<div class="zoomUpBackground hidden"></div>
 								
-				<img class="hidden plusImg" id="plusImg1"/>
+				<img class="hidden plusImg" id="plusImg1" alt="" />
 			</div>
 		<div class="productImg2 productImg--toggle">
 	        <svg id="productImg2--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -403,7 +403,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg2"/>
+			<img class="hidden plusImg" id="plusImg2" alt=""/>
 		</div>
 		<div class="productImg3 productImg--toggle">
 	        <svg id="productImg3--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -416,7 +416,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg3"/>
+			<img class="hidden plusImg" id="plusImg3" alt=""/>
 		</div>
 		<div class="productImg4 productImg--toggle">
 	        <svg id="productImg4--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -429,7 +429,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg4"/>
+			<img class="hidden plusImg" id="plusImg4" alt=""/>
 		</div>
 		<div class="productImg5 productImg--toggle">
 	        <svg id="productImg5--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -442,7 +442,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg5"/>
+			<img class="hidden plusImg" id="plusImg5" alt=""/>
 		</div>
 		<div class="productImg6 productImg--toggle">
 	        <svg id="productImg6--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -455,7 +455,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg6"/>
+			<img class="hidden plusImg" id="plusImg6" alt=""/>
 		</div>
 		<div class="productImg7 productImg--toggle">
 	        <svg id="productImg7--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -468,7 +468,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg7"/>
+			<img class="hidden plusImg" id="plusImg7" alt=""/>
 		</div>
         <div class="productImg8 productImg--toggle">
 	        <svg id="productImg8--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -481,7 +481,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg8"/>
+			<img class="hidden plusImg" id="plusImg8" alt=""/>
 		</div>
 		<div class="productImg9 productImg--toggle">
 	        <svg id="productImg9--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -494,7 +494,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg9"/>
+			<img class="hidden plusImg" id="plusImg9" alt=""/>
 		</div>
 		<div class="productImg10 productImg--toggle">
 	        <svg id="productImg10--upload" class="uploadIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -507,7 +507,7 @@ style="position:absolute;
 				
 			<div class="zoomUpBackground hidden"></div>
 			
-			<img class="hidden plusImg" id="plusImg10"/>
+			<img class="hidden plusImg" id="plusImg10" alt=""/>
 		</div>
 	</div>
     
@@ -543,7 +543,7 @@ style="position:absolute;
 </form>
 <div id="myModal" class="modal1">
     <span class="close1">&times;</span>
-    <img class="modal-content1" id="img01">
+    <img class="modal-content1" id="img01" alt="">
     <div id="caption"></div>
 </div>
 	        `;

@@ -82,87 +82,87 @@ figcaption{
 		<div class="slides_container">
 			<div class="owl-carousel owl-theme" style="text-align:center; display:flex; justify-content:center;">
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img0" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img0" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img0" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img1" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img1" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img1" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img2" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img2" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img2" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img3" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img3" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img3" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img4" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img4" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img4" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img5" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img5" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img5" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img6" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img6" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img6" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img7" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img7" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img7" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img8" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img8" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img8" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img9" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img9" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img9" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img10" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img10" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img10" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img11" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img11" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img11" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img12" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img12" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img12" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img13" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img13" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img13" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img14" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img14" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img14" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img15" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img15" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img15" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img16" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img16" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img16" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img17" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img17" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img17" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img18" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img18" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img18" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img19" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img19" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img19" style="font-weight:bold;"></figcaption>
 				</figure>
 				<figure style="margin-bottom:0;">
-					<img id="carousel_img20" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;">
+					<img id="carousel_img20" src="/kream/img/null_img.png" width="100" height="100" style="border-radius: 10px;" alt="">
 					<figcaption id="figcaption_img20" style="font-weight:bold;"></figcaption>
 				</figure>
 			</div>

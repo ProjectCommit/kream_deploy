@@ -17,7 +17,7 @@ $(function(){
 				result = `<tr>` + 
 						`<td align="center">` + item.seq + `</td>` +
 						`<td align="center">` + 
-							`<img src="../storage/` + item.image1 + `" style="width: 70px; height: 70px;">` +
+							`<img src="../storage/` + item.image1 + `" style="width: 70px; height: 70px;" alt="">` +
 						`</td>` +
 							`<td align="center">` + item.imageName + `</td>` +
 						`</tr>`;
@@ -34,7 +34,7 @@ $(function(){
 					result = `<tr>` + 
 							`<td align="center">` + item.seq + `</td>` +
 							`<td align="center">` + 
-								`<img src="../storage/` + item.image1 + `" style="width: 70px; height: 70px;">` +
+								`<img src="../storage/` + item.image1 + `" style="width: 70px; height: 70px;" alt="">` +
 							`</td>` +
 								`<td align="center">` + item.imageName + `</td>` +
 							`</tr>`;

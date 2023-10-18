@@ -23,7 +23,7 @@ pageEncoding="UTF-8"%>
         src="../img/logoAdmin.png"
         alt="logo"
         onclick="location.href='/kream/'"
-      />
+      	alt=""/>
     </div>
     <!--좌측메뉴-->
     <div id="left-right--container">

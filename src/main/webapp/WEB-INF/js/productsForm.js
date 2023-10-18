@@ -78,7 +78,7 @@ $(function () {
 
             function setCarouselImg(img) {
                 let result = `<div class="carousel-item">` +
-                    `<img src="/kream/storage/${img}" className="d-block w-100">` +
+                    `<img src="/kream/storage/${img}" className="d-block w-100" alt="">` +
                     `</div>`;
                 $('.carousel-inner').append(result);
             }
@@ -92,7 +92,7 @@ $(function () {
 
             function setDetailExplainImg(img) {
                 let result = `<div class="detailExplainImg">` +
-                    `<img src="/kream/storage/${img}" className="d-block w-100">` +
+                    `<img src="/kream/storage/${img}" className="d-block w-100" alt="">` +
                     `</div>`;
                 $('#detailExplainImg').append(result);
             }
@@ -139,13 +139,13 @@ $(function () {
 
     function createCategoryCard(productId, productImg1, brand, productName, productExplain, price, wish) {
         let result = `<div class="card">` +
-            `<div class="cardImg"><img src="/kream/storage/${productImg1}"></div>` +
+            `<div class="cardImg"><img src="/kream/storage/${productImg1}" alt=""></div>` +
             `<div class="cardBrand">${brand}</div>` +
             `<div class="cardProductName">${productName}</div>` +
             `<div class="cardProductExplain">${productExplain}</div>` +
-            `<div class="cardShip"><img src="../img/quickdel.png"></div>` +
+            `<div class="cardShip"><img src="../img/quickdel.png" alt=""></div>` +
             `<div class="cardPrice">${price}</div>` +
-            `<div class="cardInterest"><img src="../img/noninterest.png">${wish}</div>` +
+            `<div class="cardInterest"><img src="../img/noninterest.png" alt="">${wish}</div>` +
             `<input class="cardProductId" type="hidden" value="${productId}">` +
             `</div>`;
         $('#categoryProdDiv').append(result);
@@ -153,13 +153,13 @@ $(function () {
 
     function createBrandCard(productId, productImg1, brand, productName, productExplain, price, wish) {
         let result = `<div class="card">` +
-            `<div class="cardImg"><img src="/kream/storage/${productImg1}"></div>` +
+            `<div class="cardImg"><img src="/kream/storage/${productImg1}" alt=""></div>` +
             `<div class="cardBrand">${brand}</div>` +
             `<div class="cardProductName">${productName}</div>` +
             `<div class="cardProductExplain">${productExplain}</div>` +
-            `<div class="cardShip"><img src="../img/quickdel.png"></div>` +
+            `<div class="cardShip"><img src="../img/quickdel.png" alt=""></div>` +
             `<div class="cardPrice">${price}</div>` +
-            `<div class="cardInterest"><img src="../img/noninterest.png">${wish}</div>` +
+            `<div class="cardInterest"><img src="../img/noninterest.png" alt="">${wish}</div>` +
             `<input class="cardProductId" type="hidden" value="${productId}">` +
             `</div>`;
         $('#brandProdDiv').append(result);

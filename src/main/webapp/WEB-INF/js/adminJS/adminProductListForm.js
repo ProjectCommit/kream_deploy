@@ -162,7 +162,7 @@ style="position:absolute;
     <td align="center" name="productId">${item.productId}</td>
     <td align="center" name="productImg1">${item.productImg1}
         <br>
-        <img class="productImgesClass" src="${imageUrl1}"/>
+        <img class="productImgesClass" src="${imageUrl1}" alt=""/>
     </td>
     <td align="center" name="category">${item.category}</td>
     <td align="center" name="category2">${item.category2}</td>
@@ -180,39 +180,39 @@ style="position:absolute;
     <td align="center" name="size">${item.size}</td>
     <td align="center" name="productImg2">${item.productImg2}
         <br>
-        <img class="productImgesClass" src="${imageUrl2}"/>
+        <img class="productImgesClass" src="${imageUrl2}" alt=""/>
     </td>
     <td align="center" name="productImg3">${item.productImg3}
         <br>
-        <img class="productImgesClass" src="${imageUrl3}"/>
+        <img class="productImgesClass" src="${imageUrl3}" alt=""/>
     </td>
     <td align="center" name="productImg4">${item.productImg4}
         <br>
-        <img class="productImgesClass" src="${imageUrl4}"/>
+        <img class="productImgesClass" src="${imageUrl4}" alt=""/>
     </td>
     <td align="center" name="productImg5">${item.productImg5}
         <br>
-        <img class="productImgesClass" src="${imageUrl5}"/>
+        <img class="productImgesClass" src="${imageUrl5}" alt=""/>
     </td>
     <td align="center" name="productImg6">${item.productImg6}
         <br>
-        <img class="productImgesClass" src="${imageUrl6}"/>
+        <img class="productImgesClass" src="${imageUrl6}" alt=""/>
     </td>
     <td align="center" name="productImg7">${item.productImg7}
         <br>
-        <img class="productImgesClass" src="${imageUrl7}"/>
+        <img class="productImgesClass" src="${imageUrl7}" alt=""/>
     </td>
     <td align="center" name="productImg8">${item.productImg8}
         <br>
-        <img class="productImgesClass" src="${imageUrl8}"/>
+        <img class="productImgesClass" src="${imageUrl8}" alt=""/>
     </td>
     <td align="center" name="productImg9">${item.productImg9}
         <br>
-        <img class="productImgesClass" src="${imageUrl9}"/>
+        <img class="productImgesClass" src="${imageUrl9}" alt=""/>
     </td>
     <td align="center" name="productImg10">${item.productImg10}
         <br>
-        <img class="productImgesClass" src="${imageUrl10}"/>
+        <img class="productImgesClass" src="${imageUrl10}" alt=""/>
     </td>
 </tr>`;
 	  
@@ -224,7 +224,7 @@ var lastAddedRow = $('#firstTr').next();
 lastAddedRow.find(":contains('null')").each(function() {
     var nullImg = `
         <img src="https://www.qualipieces.com/images/virtuemart/typeless/imagenotfound_400x400.jpg"
-        class="noProductImg"
+        class="noProductImg" alt=""
         />`;
 
     // Check if the name attribute starts with "productImg"

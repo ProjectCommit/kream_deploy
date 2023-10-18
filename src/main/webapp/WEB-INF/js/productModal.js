@@ -45,20 +45,20 @@ $(function () {
         if(stock==0) {
             result = `<div class="noSelectSizeBtn"><div class="sizeText">${size}`;
             if(quickShip==1) {
-                result+=`<img class="shipImg" src="../img/quickdel.png"><input type="hidden" class="shipVal" value="1">`;
+                result+=`<img class="shipImg" src="../img/quickdel.png" alt=""><input type="hidden" class="shipVal" value="1 >`;
             }
             if(quickShip==0) {
-                result+=`<img class="shipImg" src="../img/defaultdel.png"><input type="hidden" class="shipVal" value="0">`;
+                result+=`<img class="shipImg" src="../img/defaultdel.png" alt=""><input type="hidden" class="shipVal" value="0">`;
             }
             result += `</div><div class="sizeStock">재고 없음</div></div>`;
         }
         if(stock!=0) {
             result = `<div class="selectSizeBtn"><div class="sizeText">${size}`;
             if(quickShip==1) {
-                result+=`<img class="shipImg" src="../img/quickdel.png"><input type="hidden" class="shipVal" value="1">`;
+                result+=`<img class="shipImg" src="../img/quickdel.png" alt=""><input type="hidden" class="shipVal" value="1">`;
             }
             if(quickShip==0) {
-                result+=`<img class="shipImg" src="../img/defaultdel.png"><input type="hidden" class="shipVal" value="0">`;
+                result+=`<img class="shipImg" src="../img/defaultdel.png" alt=""><input type="hidden" class="shipVal" value="0">`;
             }
             result += `</div><div class="sizeStock"><div>재고 : </div> <div class="stockNo">${stock}</div></div></div>`;
         }

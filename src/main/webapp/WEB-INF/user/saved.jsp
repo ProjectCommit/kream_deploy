@@ -39,7 +39,7 @@
                                     <span> </span>
                                 </div>
                                 <picture class="picture product_img">
-    								<img alt="상품 이미지" src="/kream/storage/${product.productImg1}" loading="lazy" class="image full_width">
+    								<img alt="상품 이미지" src="/kream/storage/${product.productImg1}" loading="lazy" class="image full_width" alt="">
                                 </picture>
                                 <!---->
                             <!---->

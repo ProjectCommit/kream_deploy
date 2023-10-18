@@ -110,7 +110,7 @@ public class CykController {
 //				e.printStackTrace();
 //			}
 //			
-//			result += "<span><img src='/kream/storage/" + fileName + "' width='300' height='300' /></span>";
+//			result += "<span><img src='/kream/storage/" + fileName + "' width='300' height='300' alt=""/></span>";
 //			
 //		}//for
 //		
@@ -155,7 +155,7 @@ public class CykController {
 //				e.printStackTrace();
 //			}
 //			
-//			result += "<span><img src='/kream/storage/" + fileName + "' width='300' height='300' /></span>";
+//			result += "<span><img src='/kream/storage/" + fileName + "' width='300' height='300' alt="" /></span>";
 //			
 //		}//for
 //		

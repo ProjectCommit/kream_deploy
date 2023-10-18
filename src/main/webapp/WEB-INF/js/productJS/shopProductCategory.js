@@ -73,7 +73,7 @@ $(function () {
 		                    <p class="card-text" style="font-weight:bold; font-size:14px; color:#000">` + formattedPrice + `</p>
 		                </div>
 		                <div class="card-footer">
-	                    <small class="text-body-secondary"><img src='/kream/img/noninterest.png' style='width:20px; height:20px;'>&nbsp;` + dotHit + `</small>
+	                    <small class="text-body-secondary"><img src='/kream/img/noninterest.png' style='width:20px; height:20px;' alt=''>&nbsp;` + dotHit + `</small>
 	                </div>
 		            </div>
 		        </div>`;

@@ -51,7 +51,7 @@
             <div class="header_mainWrapper">
                 <div class="header_main">
                     <div class="main_inner">
-                         <a href="/kream"><h1><img class="logo"  src="../css/cykcss/cssimage/logo.png" ></h1></a> 
+                         <a href="/kream"><h1><img class="logo"  src="../css/cykcss/cssimage/logo.png" alt="" ></h1></a> 
                         <div class="main_center"></div>
                         <div class="main_right">
                             <div class="homeStyleShopSearchArea">
@@ -61,7 +61,7 @@
                                         <li class="homeStyleShop_item">STYLE</li>
                                         <li class="homeStyleShop_item">SHOP</li>
                                         <!-- <li><img class="micro" src="https://svgsilh.com/svg/1093183.svg" style="width: 30px; height: 25px;"></img></li> -->
-                                        <li><img class="micro" src="../css/cykcss/cssimage/search.png" style="width: 25px; height: 25px;"></img></li>
+                                        <li><img class="micro" src="../css/cykcss/cssimage/search.png" style="width: 25px; height: 25px;" alt=""></img></li>
                                     </ul>
                                 </div>
                             </div>

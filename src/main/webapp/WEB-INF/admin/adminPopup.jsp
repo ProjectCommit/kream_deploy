@@ -12,6 +12,6 @@ align-items:center;
 justify-content: center;
 
 ">
-<img src="/kream/img/popupProductUpload.png" alt="popup" style="width:400px;">
+<img src="/kream/img/popupProductUpload.png" alt="popup" style="width:400px;" alt="">
 </body>
 </html>
