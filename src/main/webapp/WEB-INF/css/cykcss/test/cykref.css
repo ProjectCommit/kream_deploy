@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+body, h1,h2,h3,h4, input, textarea, button, select, option {
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: 15px;
+    color: #222;
+ }
+
+*, :after , :before{
+    box-sizing: border-box; 
+}
+.h1{
+    font-size: 17px;
+}
+body{
+    background-color: white;
+}
+.div{
+    display: block;
+}
+.home_products{
+    margin-left: 28px;
+    margin-top: 28px;
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    padding-top: 0;
+    background-color: bisque;
+
+}
+.container_title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;   
+    margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 1280px;  
+    padding: 0 16px;   
+    /* background-color: yellowgreen; */
+}
+.title{
+    overflow: hidden; /* 텍스트 요소의 내용이 너비초과할때 내용숨기기*/
+    text-overflow: ellipsis; /*요소의 내용이 너비 초과할때 ...으로 말줄임표 표시*/
+    color:#000;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 0;
+}
+.title_wrap{
+    flex:1;
+}
+.product_list_wrap{
+    background-color: aqua;
+    margin: 0 auto;
+}
+.product_list{
+    grid-column-gap: 8px;
+    grid-row-gap: 28px;
+    column-gap: 8px;
+    display: grid;
+    row-gap: 28px;
+    grid-template-columns: repeat(5,minmax(0,1fr)); 
+    flex: 0 0 auto;
+}
+.product_list > .product_item{ /* product_list 바로밑에 있어야 적용됨.*/
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    margin:20px 0;
+    padding: 0 12px;
+    position: relative;
+    vertical-align: top;
+    width: 25%;
+}
+.product_item  .item_inner{ /*어쨋든 product_item 바로밑에 없어도 적용은 됨. */
+    background-color: #fff;
+    border-radius: 12px;
+    display: block;
+}
+.product_card{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.product{
+    border-radius: 8px;
+    overflow: hidden;
+    padding-top: 100%; /*padding-top: 100%;는 요소의 너비에 상관없이 요소의 높이를 100%로 설정합니다. */
+    position: relative; /*position: relative;는 요소의 다른 자식 요소나 인근 요소에는 영향을 미치지 않고 해당 요소 자체에만 적용됩니다.*/
+}
+.display_tag_item{
+    background-color: rgb(34,34,34);
+    color:rgb(255, 255, 255);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column; /*flex-direction: column;은 요소의 주축을 따라 요소를 배치합니다. */
+    font-size: 14px;
+    font-weight: 600;
+    height: 26px;
+    justify-content: center; 
+    left: 8px;
+    line-height: 17px;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    width: 26px;
+    z-index: 1;
+}
+.product_img{
+    height: auto;
+    width: 100%;
+    left:50%;
+    position:absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    display: flex;
+}
+.product_item .btn_wish{
+    bottom: 3px;
+    display: inline-flex;
+    padding: 5px;
+    position: absolute;
+    right: 3px;
+    z-index: 1;
+    height: inherit;
+}
+[role="button"]{
+    cursor: pointer;
+}
+.product_item .info_box{
+    padding-top: 9px;
+}
+.brand-text{
+    color: #222;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    height: 17px;
+    line-height: 17px;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: fit-content;
+}
+[class*=brand-]{
+    height: 20px;
+    width: auto;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.name{
+    font-size: 13px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.translated_name{
+    color: rgba(34,34,34,.5); /*rgba() 함수는 rgb()와 거의 동일하지만, 마지막 매개변수로 투명도 값을 추가할 수 있습니다. 이 값은 0에서 1 사이의 숫자로 지정됩니다. 예를 들어, rgba(255, 0, 0, 0.5)는 빨간색의 반투명한 색상을 나타냅니다.*/
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tags{
+    margin-top: 4px;
+}
+.item_inner > :not(.product) ,
+.item_inner~*{
+    padding-left: 4px;
+    padding-right: 4px;
+} /*"~" 연산자는 선택된 요소의 형제 요소를 선택합니다. "*"는 모든 요소를 나타냅니다.*/
+.price price_area{
+    margin-top: 12px;
+}
+.amount{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+}
+.desc{
+    color: rgba(34,34,34,.5);
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 2px;
+}
+.action_wish_review{
+    column-gap: 12px;
+    display: flex;
+    padding-top: 12px;
+}
+.action_wish_review > span{
+    align-items: center;
+    display: inline-flex;
+}

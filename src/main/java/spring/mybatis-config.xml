@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+		<typeAlias type="kream.bean.AdminProductDTO" alias="product"/>
+		<typeAlias type="kream.bean.AdminProductIdsDTO" alias="productIds"/>
+		<typeAlias type="kream.bean.UserDTO" alias="user"/>
+		<typeAlias type="kream.bean.UserEmailsDTO" alias="userEmails"/>
+		<typeAlias type="kream.bean.ProductCategoriesDTO" alias="categories"/>
+		<typeAlias type="kream.bean.ProductBoardDTO" alias="productBoard"/>
+		<typeAlias type="kream.bean.WishListsDTO" alias="wishLists"/>
+		<typeAlias type="kream.bean.AddressDTO" alias="address"/>
+		<typeAlias type="kream.bean.OrderDTO" alias="order" />
+	</typeAliases>
+</configuration>

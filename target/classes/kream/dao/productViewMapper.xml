@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="productViewSQL">
+    <resultMap id="productResult" type="kream.bean.AdminProductDTO">
+        <result column="productId" property="productId"/>
+		<result column="category" property="category"/>
+		<result column="category2" property="category2"/>
+		<result column="gender" property="gender"/>
+		<result column="brand" property="brand"/>
+		<result column="productName" property="productName"/>
+		<result column="productExplain" property="productExplain"/>
+		<result column="productDetail" property="productDetail"/>
+		<result column="price" property="price"/>
+		<result column="stock" property="stock"/>
+		<result column="productColor" property="productColor"/>
+		<result column="hit" property="hit"/>
+		<result column="createdDate" property="createdDate"/>
+		<result column="releaseDate" property="releaseDate"/>
+		<result column="size" property="size"/>
+		<result column="productImg1" property="productImg1"/>
+		<result column="productImg2" property="productImg2"/>
+		<result column="productImg3" property="productImg3"/>
+		<result column="productImg4" property="productImg4"/>
+		<result column="productImg5" property="productImg5"/>
+		<result column="productImg6" property="productImg6"/>
+		<result column="productImg7" property="productImg7"/>
+		<result column="productImg8" property="productImg8"/>
+		<result column="productImg9" property="productImg9"/>
+		<result column="productImg10" property="productImg10"/>
+    </resultMap>
+
+    <!-- 전체 상품출력 -->
+	<select id="listView" resultType="product">
+	    <![CDATA[
+	    select * 
+	    from product 
+	    order by category, hit desc;
+	    ]]>
+	</select>
+	
+	<!-- 캐러셀을 히트 브랜드 순으로 출력 -->
+	<select id="hitBrandView" resultType="product">
+	    <![CDATA[
+	    SELECT *, MAX(hit) AS max_hit
+		FROM product
+		GROUP BY brand
+		ORDER BY max_hit DESC, brand;
+	    ]]>
+	</select>
+	
+	<!-- 상품 필터 -->
+	<select id="categoryFilter" parameterType="kream.bean.ProductCategoriesDTO" resultType="kream.bean.AdminProductDTO">
+	    SELECT * FROM product
+	    <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0) or (cate3Values != null and cate3Values.size() > 0) or (cate4Values != null and cate4Values.size() > 0) or (cate3Values != null and cate5Values.size() > 0)">
+	        WHERE
+	        <if test="cate1Values != null and cate1Values.size() > 0">
+			    (
+			    <foreach collection="cate1Values" item="value" separator=" OR " open="" close="">
+			        category = #{value}
+			    </foreach>
+			    )
+			</if>
+			<if test="cate2Values != null and cate2Values.size() > 0">
+			    <if test="cate1Values != null and cate1Values.size() > 0">
+			        AND
+			    </if>
+			    (
+			    <foreach collection="cate2Values" item="value" separator=" OR " open="(" close=")">
+			        category2 = #{value}
+			    </foreach>
+			    )
+			</if>
+	        <if test="cate3Values != null and cate3Values.size() > 0">
+	            <if test="cate1Values != null and cate1Values.size() > 0 or cate2Values != null and cate2Values.size() > 0">
+	                AND
+	            </if>
+	            (
+	            <foreach collection="cate3Values" item="value" separator=" OR " open="(" close=")">
+	               gender = #{value}
+	            </foreach>
+	            )
+	        </if>
+	        <if test="cate4Values != null and cate4Values.size() > 0">
+	            <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0) or (cate3Values != null and cate3Values.size() > 0) or (cate5Values != null and cate5Values.size() > 0)">
+	                AND
+	            </if>
+	           (
+	            <foreach collection="cate4Values" item="value" separator=" OR " open="(" close=")">
+	               brand = #{value}
+	            </foreach>
+	            )
+	        </if>
+	        <if test="cate5Values != null and cate5Values.size() > 0">
+	            <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0) or (cate3Values != null and cate3Values.size() > 0)">
+	                AND
+	            </if>
+	           (
+	            <foreach collection="cate5Values" item="value" separator=" OR " open="(" close=")">
+	               size LIKE CONCAT('%', #{value}, '%')
+	            </foreach>
+	            )
+	        </if>
+	    </if>
+	    order by category, hit DESC
+	</select>
+
+	<!-- 브랜드 필터 -->
+	<select id="brandFilter" parameterType="categories" resultType="product">
+	    SELECT brand FROM product
+	    WHERE 1=1
+	    AND brand IS NOT NULL
+	    <if test="cate1Values != null and cate1Values.size() > 0">
+	        AND category IN 
+	        (<foreach item="item" index="index" collection="cate1Values" separator=",">
+	            #{item}
+	        </foreach>)
+	    </if>
+	    <if test="cate2Values != null and cate2Values.size() > 0">
+	        AND category2 IN 
+	        (<foreach item="item" index="index" collection="cate2Values" separator=",">
+	            #{item}
+	        </foreach>)
+	    </if>
+	    GROUP BY brand
+	</select>
+	
+	<!-- 필터와 연동한 캐러셀을 히트 브랜드 순으로 출력 -->
+	<select id="selectCarouselFilter" parameterType="kream.bean.ProductCategoriesDTO" resultType="product">
+		SELECT *, MAX(hit) AS max_hit
+		FROM product
+		    <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0) or (cate3Values != null and cate3Values.size() > 0) or (cate4Values != null and cate4Values.size() > 0) or (cate5Values != null and cate5Values.size() > 0)">
+		    <!-- 카테고리 필터 조건 -->
+		    WHERE
+		      <if test="cate1Values != null and cate1Values.size() > 0">
+		        (
+		        <foreach collection="cate1Values" item="value" separator=" OR " open="" close="">
+		          category = #{value}
+		        </foreach>
+		        )
+		      </if>
+		      <if test="cate2Values != null and cate2Values.size() > 0">
+		        <if test="cate1Values != null and cate1Values.size() > 0">
+		          AND
+		        </if>
+		        (
+		        <foreach collection="cate2Values" item="value" separator=" OR " open="(" close=")">
+		          category2 = #{value}
+		        </foreach>
+		        )
+		      </if>
+		      <if test="cate3Values != null and cate3Values.size() > 0">
+		        <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0)">
+		          AND
+		        </if>
+		        (
+		        <foreach collection="cate3Values" item="value" separator=" OR " open="(" close=")">
+		          gender = #{value}
+		        </foreach>
+		        )
+		      </if>
+		      <if test="cate4Values != null and cate4Values.size() > 0">
+		        <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0) or (cate3Values != null and cate3Values.size() > 0)">
+		          AND
+		        </if>
+		        (
+		        <foreach collection="cate4Values" item="value" separator=" OR " open="(" close=")">
+		          brand = #{value}
+		        </foreach>
+		        )
+		      </if>
+		      <if test="cate5Values != null and cate5Values.size() > 0">
+		        <if test="(cate1Values != null and cate1Values.size() > 0) or (cate2Values != null and cate2Values.size() > 0) or (cate3Values != null and cate3Values.size() > 0) or (cate4Values != null and cate4Values.size() > 0)">
+		          AND
+		        </if>
+		        (
+		        <foreach collection="cate5Values" item="value" separator=" OR " open="(" close=")">
+		          size LIKE CONCAT('%', #{value}, '%')
+		        </foreach>
+		        )
+		      </if>      
+		    </if>
+		GROUP BY brand
+		ORDER BY max_hit DESC, brand;
+	</select>
+	
+	<!-- 상품 검색 -->
+	<select id="searchProduct" parameterType="java.lang.String" resultType="product">
+		SELECT DISTINCT *
+	    FROM product
+	    WHERE
+	        LOWER(category) LIKE CONCAT('%', LOWER(#{value}), '%')
+	        OR LOWER(category2) LIKE CONCAT('%', LOWER(#{value}), '%')
+	        OR LOWER(brand) LIKE CONCAT('%', LOWER(#{value}), '%')
+	        OR LOWER(productName) LIKE CONCAT('%', LOWER(#{value}), '%')
+	        OR LOWER(productExplain) LIKE CONCAT('%', LOWER(#{value}), '%')
+	        OR LOWER(productDetail) LIKE CONCAT('%', LOWER(#{value}), '%')
+	</select>
+	
+	<!-- 상품 검색값을 캐러셀에 줌 -->
+	<select id="searchProductCarousel" parameterType="java.lang.String" resultType="product">
+		SELECT *, MAX(hit) AS max_hit
+		FROM product
+		    WHERE
+		        (LOWER(category) LIKE CONCAT('%', LOWER(#{value}), '%')
+		        OR LOWER(category2) LIKE CONCAT('%', LOWER(#{value}), '%')
+		        OR LOWER(brand) LIKE CONCAT('%', LOWER(#{value}), '%')
+		        OR LOWER(productName) LIKE CONCAT('%', LOWER(#{value}), '%')
+		        OR LOWER(productExplain) LIKE CONCAT('%', LOWER(#{value}), '%')
+		        OR LOWER(productDetail) LIKE CONCAT('%', LOWER(#{value}), '%'))
+		GROUP BY brand
+		ORDER BY max_hit DESC, brand;
+	</select>
+</mapper>

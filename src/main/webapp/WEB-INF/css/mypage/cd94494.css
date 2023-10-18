@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+
+.content_title {
+    display: flex;
+    padding: 5px 0 6px
+}
+
+.my_order_detail .content_title {
+    margin-bottom: 20px
+}
+
+.content_title{
+    border-bottom: 3px solid #222;
+    padding-bottom: 16px
+}
+
+.content_title.has_sub {
+    padding-bottom: 22px
+}
+
+.content_title.has_sub .btn_box {
+    padding-top: 4px
+}
+
+.title {
+    font-size: 24px;
+    letter-spacing: -.36px
+}
+
+.title>h3 {
+    font-size: inherit;
+    line-height: 29px
+}
+
+.sub_title {
+    color: rgba(34,34,34,.5);
+    font-size: 12px;
+    letter-spacing: -.005em
+}
+
+.profile_info {
+    max-width: 483px;
+    padding-top: 41px;
+}
+
+.btn_modify_outlinegrey_small {
+	position: absolute;
+    right: 0;
+}
+
+
+
+
+
+/*
+.btn_box {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 30px
+}
+
+.btn_box .btn {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: -.21px;
+    margin-right: -6px;
+    padding: 0 6px
+}
+
+.btn_box .btn+.btn {
+    margin-left: 8px
+}
+
+.btn_box .btn.btn_add {
+    border: 1px solid #222;
+    border-radius: 10px;
+    font-size: 12px;
+    height: 34px;
+    letter-spacing: -.06px;
+    line-height: 32px;
+    margin-right: 0;
+    padding: 0 14px
+}
+
+.btn_box .btn .btn_cancel {
+    color: #f15746
+}
+
+.btn_box .icon {
+    height: 20px;
+    margin-right: 4px;
+    width: 20px
+}
+
+.mo .content_title,.sm .content_title {
+    border-bottom-width: 2px;
+    padding-top: 7px
+}
+
+.mo.my .content_title,.sm.my .content_title {
+    display: none
+}
+
+.mo .my_addressbook .content_title,.mo .my_payment .content_title,.sm .my_addressbook .content_title,.sm .my_payment .content_title {
+    border-bottom: 0;
+    display: block;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-top: 10px
+}
+
+.mo .my_addressbook .content_title .title,.mo .my_payment .content_title .title,.sm .my_addressbook .content_title .title,.sm .my_payment .content_title .title {
+    display: none
+}
+
+.mo .my_addressbook .content_title .btn_box,.mo .my_payment .content_title .btn_box,.sm .my_addressbook .content_title .btn_box,.sm .my_payment .content_title .btn_box {
+    padding-left: 0
+}
+
+.mo .my_addressbook .content_title .btn,.mo .my_payment .content_title .btn,.sm .my_addressbook .content_title .btn,.sm .my_payment .content_title .btn {
+    border-color: #d3d3d3;
+    border-radius: 12px;
+    font-size: 16px;
+    height: 52px;
+    letter-spacing: -.16px;
+    line-height: 52px;
+    width: 100%
+}
+
+.mo .my_addressbook .content_title .btn_txt,.mo .my_payment .content_title .btn_txt,.sm .my_addressbook .content_title .btn_txt,.sm .my_payment .content_title .btn_txt {
+    width: 100%
+}*/

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100%;
+    }
+
+    .container{
+        background:beige;
+        height: 100vh; /* 뷰포트의 높이값을 100%로 설정 부모와 상관없이, 100퍼센트가 오게 하겠다. */
+        display: flex; /* flex 왼쪽에서 오른쪽으로 정렬됨. */
+        flex-direction: row-reverse; /* flex-direction: row-reverse 기존과 반대로 오른쪽에서 왼쪽으로정렬됨. */
+        /*flex-direction: column-reverse; column 만쓰면 위에서 아래로 내려온다.*/ /* flex-direction: column-reverse 기존과 반대로 아래에서 위로 정렬됨. */                    
+        /*flex-wrap: nowrap;*/  /* flex-wrap: nowrap 기본값으로 설정되어있음. 아이템들이계속붙어있음. 랩핑안하겠다. */
+        /*flex-wrap: wrap;    /* flex-wrap: wrap 아이템들이 랩핑되어서 다음줄로 넘어감. 아이템들이 꽉차면 자동으로 다음줄로 넘어감. */
+        flex-wrap: wrap-reverse; /* 밑에서 위로 역순으로 랩핑됨. */
+        /*flex-flow: column wrap; */
+        justify-content: flex-start; /* justify-content: flex-start 기본값으로 설정되어있음. 왼쪽정렬 */
+        /*justify-content: flex-end;*/ /* 오른쪽정렬. 오른쪽부터 아이템을 정렬시킴.*/
+        /*justify-content: center;*/ /* 가운데정렬. 가운데부터 아이템을 정렬시킴.*/
+        /*justify-content: space-around;*/ /* 아이템들의 간격을 동일하게 설정함. 아이템간격사이에 빈칸이 나옴.*/
+        justify-content: space-between; /* 아이템들의 간격을 동일하게 설정함. 아이템간격사이에 빈칸이 안나옴.*/
+        justify-content: space-evenly; /* 아이템들의 간격을 동일하게 설정함. 아이템간격사이에 빈칸이 나옴.*/
+        align-items: baseline;  /* align-items: baseline 기본값으로 설정되어있음. 아이템들의 텍스트를 기준으로 정렬함. */
+        align-content: space-between; /* align-content: space-between 기본값으로 설정되어있음. 아이템들의 간격을 동일하게 설정함. 아이템간격사이에 빈칸이 안나옴.*/
+        align-content: center;  /* align-content: center 아이템들의 간격을 동일하게 설정함. 아이템간격사이에 빈칸이 나옴.*/
+        display: flex; /* display: flex 기본값으로 설정되어있음. */
+
+    }
+
+
+    .item{
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+    }
+    .item1{
+        background: #ef9a9a;
+        /* flex-basis: 60%; */
+        flex: 2 2 auto;
+        align-self: center;
+        /*order: 2;*/
+    }
+    .item2{
+        background: #f48fb1;
+        flex-basis: 30%;
+        /* order: 1; */
+    }
+    .item3{
+        background: #ce93d8;
+        flex-basis:10%;
+        /* order: 3; */
+    }   
+    .item4{
+        background: #b39ddb;
+    }  
+    .item5{
+        background: #9fa8da;
+    }   
+    .item6{
+        background: #90caf9;
+    }   
+    .item7{
+        background: #81d4fa;
+    }   
+    .item8{
+        background: #80deea;
+    }   
+    .item9{
+        background: #80cbc4;
+    }   
+    .item10{
+        background: #a5d6a7;
+    }   
+</style>
+<body>
+    <!-- div.container>div.item.item${$} *10-->
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+</body>
+</html>

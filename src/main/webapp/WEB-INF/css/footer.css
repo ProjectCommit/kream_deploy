@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+/* footer start */
+.footer_box1 {
+	display: flex;
+	justify-content:center;
+}
+.footer_box2 {
+	display: flex;
+	justify-content:center;
+}
+.guidenav{
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  margin-top:60px;
+}
+.supportnav{
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  margin-top:60px;
+  margin-right:400px;
+}
+.supportTel{
+  display: flex;
+  flex-direction: column;
+  margin-top:60px;
+}
+.supporTeltnav{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  color:gray;
+}
+.guidenav > div {
+  padding-bottom: 10px;
+}
+.supportnav > div{
+  padding-bottom: 10px;
+}
+
+.guidenav a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: gray;
+}
+.supportnav a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: gray;
+}
+.question{
+	margin-top:20px;
+	width: 130px; 
+	height: 40px;
+	background-color: black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:white;
+	font-weight: bold;
+}
+.company_infonav{
+	font-size:0.9em;
+	color:gray;
+}
+.company_infonav div{
+	padding-bottom:5px;
+}
+
+.footer_hr{
+	width: 1320px;
+    margin: 0 auto; /* 가운데 정렬을 원한다면 추가 */
+}
+/* footer end */

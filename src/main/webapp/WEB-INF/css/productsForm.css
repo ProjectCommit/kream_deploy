@@ -1,0 +1,637 @@
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1900px){
+    
+}
+
+#mainContainer {
+    width: 1920px;
+    margin: 130px 0 0 0 ;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 1920px;
+    background-color: white;
+    z-index: 2;
+}
+
+#menu {
+    margin: 0 210px;
+}
+
+#topMenu {
+    display: flex;
+    justify-content: end;
+}
+
+#secondMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blind {
+    display:block;
+    overflow:hidden;
+    position:absolute;
+    left:0;
+    top:-1000em;
+}
+
+.logo {
+    margin-left:260px;
+    padding:50px 0 12px 26px;
+}
+.logo a {
+    width:130px;
+    height:40px;
+}
+
+.topnav {   /*  ㅻⅨ履  諛곗튂, 'absolute'濡   꾩튂 吏    */
+    padding-left:930px;
+    top:10px;
+}
+.topnav span{
+    padding-right:15px;
+}
+.topnav a{
+    text-decoration: none;
+    color:black;
+    font-size:0.8em;
+}
+a.title{
+    display: flex;
+    justify-content: center; /*  섑룊 媛  대뜲  뺣젹 */
+    align-items: center; /*  섏쭅 媛  대뜲  뺣젹 */
+    font-weight:bold;
+    text-align:center;
+    padding:0;
+    font-size: 1.8em;
+    color:black;
+    text-decoration-line: none; /* 諛묒쨪  쒓굅 */
+}
+.topnav dd {
+    float:left;
+    padding-right:11px;
+    margin-right:10px;
+}
+.topnav dd:last-child {
+    padding-right:0;
+    margin-right:0;
+    background:none;
+}
+.topnav dd a{
+    font-weight:bold;
+    font-size:0.7em;
+    text-decoration: none; /* 諛묒쨪  쒓굅 */
+}
+.secondNav dd {
+    float:left;
+    padding:0 0 10px 20px;
+    margin-right:0;
+    margin-left:20px;
+}
+.secondNav dd a{
+    color:black;
+    font-size:1.1em;
+    text-decoration: none; /* 諛묒쨪  쒓굅 */
+}
+
+#bar {
+    display: none;
+    justify-content: space-between;
+    margin: 20px 210px;
+}
+
+#prodBar {
+    display: flex;
+}
+
+#prodImgBar {
+    width: 90px;
+    margin-right: 7px;
+}
+
+#prodImgBar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+#prodExplainBar {
+    color: #bbbbbb;
+    font-size: 0.8em;
+}
+
+#prodDeliveryBar img{
+    width: 25px;
+}
+
+#orderBar {
+    display: flex;
+}
+
+#interestBar {
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    margin: 15px 5px;
+}
+
+#interestBarImg {
+
+}
+
+#interestBartext {
+    color: black;
+}
+
+#basketBar {
+    background-color: lightgray;
+    color: white;
+    width: 150px;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid ;
+    border-radius: 7px;
+    margin: 15px 5px;
+}
+
+#purchaseBar {
+    background-color: limegreen;
+    color: white;
+    width: 150px;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid ;
+    border-radius: 7px;
+    margin: 15px 5px;
+}
+
+
+#mainSection {
+    display: flex;
+    margin: 0 210px;
+    padding-bottom: 120px;
+    height: 1080px;
+}
+
+#leftSection {
+    margin: 0 70px 0 0;
+    width: 698px;
+    overflow: auto;
+    height: 1080px;
+}
+
+#carouselExample img {
+    object-fit: cover;
+}
+
+#rightSection {
+    padding: 0 0 0 70px;
+    width: 698px;
+    border-left: 1px solid;
+    border-color: lightgray;
+    height: 1080px;
+}
+
+#explainSection {
+    margin-bottom: 20px;
+}
+
+#brand {
+    margin: 5px 0;
+    font-size: 1.7em;
+    color : black;
+    text-underline-offset: 7px;
+    font-weight: bold;
+}
+
+#productName {
+    margin: 5px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#productExplain {
+    font-size: 0.8em;
+    color: #bbbbbb;
+}
+
+#colorSection {
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    border : 1px solid #bbbbbb;
+    padding: 5px 15px;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+
+#colorBtn {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+#sizeSection {
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border : 1px solid #bbbbbb;
+    padding: 5px 15px;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+
+#sizeSection:hover, #colorSection:hover, #detailExplainBar:hover, #boardBar:hover, #prodRecommendBar:hover {
+    cursor: pointer;
+}
+
+#sizeBtn {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#priceSection {
+    border-top: 1px solid #bbbbbb;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#price {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#stockSection, #deliveryTypeSection {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#stock, #quickOrder {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#purchaseSection {
+    display: flex;
+}
+
+#basket {
+    background-color: lightgray;
+    color: white;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid ;
+    border-radius: 7px;
+}
+
+#purchase {
+    background-color: limegreen;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid ;
+    border-radius: 7px;
+    width: 700px;
+}
+
+#eventSection {
+    margin: 20px 0;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+#eventSection table{
+    margin: 10px 0;
+}
+
+#eventSection th{
+    padding: 10px 0;
+    color: #999999;
+    width: 80px;
+}
+
+#eventSection td{
+    font-weight: bold;
+}
+
+#deliverySection {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+#deliverySection table{
+    margin: 10px 0;
+}
+
+#deliverySection th{
+    width: 80px;
+}
+
+#assuranceSection {
+    margin: 20px 0;
+}
+
+#assuranceSection table{
+    margin: 10px 0;
+}
+
+#assuranceSection th{
+    width: 80px;
+    margin: 10px 0;
+}
+
+#secondBarContainer {
+    width: 1920px;
+}
+
+#secondBar {
+    display: flex;
+    justify-content: center;
+    margin: 60px 210px 15px 210px;
+    padding: 0 0 15px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+#detailExplainBar, #boardBar, #prodRecommendBar {
+    width: 400px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#detailExplainContainer {
+    width: 1920px;
+}
+
+#detailExplainText {
+    margin: 20px 210px 0 210px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#detailExplainImg {
+    margin: 20px 210px 0 210px;
+    padding: 0 0 100px 0;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+#questionContainer {
+    width: 1920px;
+}
+
+#questionTitle {
+    margin: 20px 210px 0 210px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#questionBtn {
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 5px;
+    width: 70px;
+    height: 29px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#questionBoard {
+    margin: 20px 210px 0 210px;
+}
+
+
+#categoryContainer {
+    width: 1920px;
+}
+
+#categoryProdDiv {
+    margin: 10px 210px;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#brandContainer {
+    width: 1920px;
+}
+
+#brandProdDiv {
+    margin: 10px 210px;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#interest {
+    border: 1px solid #666666;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#basketBar:hover, #basket:hover, #purchaseBar:hover, #purchase:hover, #interestBar:hover, #interest:hover {
+    cursor: pointer;
+}
+
+.carousel-inner img{
+    width: 698px;
+    height: 698px;
+}
+
+#detailExplainImg img {
+    width: 700px;
+    height: 700px;
+    margin: 10px 400px;
+}
+
+.questionSection {
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    width: 1500px;
+}
+
+.questionHeader {
+    padding: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+}
+
+.secretQuestionHeader {
+    padding: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.questionTitle {
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.questionDetail {
+    font-size: 0.8em;
+    color: #bbbbbb;
+    display: flex;
+}
+
+.questionContent {
+    display: none;
+    padding: 10px;
+    width: 1200px;
+}
+.replyDiv {
+    display: flex;
+}
+
+.arrayDiv {
+    width: 10px;
+}
+
+.evenReply {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    width: 1490px;
+}
+
+.oddReply {
+    display: flex;
+    justify-content: space-between;
+    width: 1490px;
+}
+
+.replyBody {
+    display: flex;
+}
+.replyContent {
+    margin: 10px 0 0 10px;
+    width: 1200px;
+}
+
+.replyDetail {
+    font-size: 0.8em;
+    color: #bbbbbb;
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.replyWriteDiv {
+    width: 1400px;
+    height: 250px;
+}
+
+.replyWriteArea {
+    width: 1400px;
+    height: 200px;
+    margin: 10px 0 10px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.replySubmitDiv {
+    text-align: center;
+}
+
+.replySubmitDiv button{
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#boardPagingDiv {
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.paging {
+    margin: 0 10px;
+    color: #444444;
+    cursor: pointer;
+}
+
+.currentPaging{
+    margin: 0 10px;
+    font-weight: bold;
+    color: #444444;
+}
+
+#goCategoryRecomend a, #goBrandRecomend a {
+    font-size: 0.8em;
+    color: #bbbbbb;
+    text-decoration: unset;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 16px;
+    margin: 10px 15px;
+    width: 260px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.cardImg img {
+    width: 220px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.cardBrand{
+    font-weight: bold;
+}
+
+.cardProductExplain {
+    font-size: 0.9em;
+    color: #bbbbbb;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardShip img {
+    width: 25px;
+    height: 25px;
+}
+
+.cardPrice {
+    font-weight: bold;
+}
+
+.cardInterest{
+    font-size: 0.8em;
+    color: #bbbbbb;
+}
+
+.cardInterest img{
+    width: 15px;
+    height: 15px;
+}

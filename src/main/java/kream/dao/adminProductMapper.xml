@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="adminProductSQL">
+    <resultMap id="productResult" type="kream.bean.AdminProductDTO">
+        <result column="productId" property="productId"/>
+		<result column="category" property="category"/>
+		<result column="category2" property="category2"/>
+		<result column="gender" property="gender"/>
+		<result column="brand" property="brand"/>
+		<result column="productName" property="productName"/>
+		<result column="productExplain" property="productExplain"/>
+		<result column="productDetail" property="productDetail"/>
+		<result column="price" property="price"/>
+		<result column="stock" property="stock"/>
+		<result column="productColor" property="productColor"/>
+		<result column="hit" property="hit"/>
+		<result column="createdDate" property="createdDate"/>
+		<result column="releaseDate" property="releaseDate"/>
+		<result column="size" property="size"/>
+		<result column="productImg1" property="productImg1"/>
+		<result column="productImg2" property="productImg2"/>
+		<result column="productImg3" property="productImg3"/>
+		<result column="productImg4" property="productImg4"/>
+		<result column="productImg5" property="productImg5"/>
+		<result column="productImg6" property="productImg6"/>
+		<result column="productImg7" property="productImg7"/>
+		<result column="productImg8" property="productImg8"/>
+		<result column="productImg9" property="productImg9"/>
+		<result column="productImg10" property="productImg10"/>
+    </resultMap>
+
+    <!-- 등록 -->
+	<insert id="upload" parameterType="product">
+	    <![CDATA[
+	    insert into product (
+	        category, category2, gender, brand, productName, productExplain,
+	        productDetail, price, stock, productColor,
+	        hit, createdDate, releaseDate, size,
+	        productImg1, productImg2, productImg3, productImg4, productImg5,
+	        productImg6, productImg7, productImg8, productImg9, productImg10
+	    ) values (
+	        #{category}, #{category2}, #{gender}, #{brand}, #{productName},
+	        #{productExplain}, #{productDetail}, #{price}, 
+	        #{stock}, #{productColor}, #{hit}, CURRENT_TIMESTAMP, #{releaseDate}, #{size},
+	        #{productImg1}, #{productImg2}, #{productImg3}, #{productImg4}, #{productImg5},
+	        #{productImg6}, #{productImg7}, #{productImg8}, #{productImg9}, #{productImg10}
+	    )
+	    ]]>
+	</insert>
+	
+	<!-- 목록 불러오기 -->
+	<select id="load" resultType="product">
+		select * from product order by productId;
+	</select>
+	
+	
+	<!-- 상품 수정하기 -->
+	<update id="edit" parameterType="product">
+		UPDATE product 
+		SET 
+		    category = #{category},
+		    category2 = #{category2},
+		    gender = #{gender},
+		    brand = #{brand},
+		    productName = #{productName},
+		    productExplain = #{productExplain},
+		    productDetail = #{productDetail},
+		    price = #{price},
+		    stock = #{stock},
+		    productColor = #{productColor},
+		    releaseDate = #{releaseDate},
+		    size = #{size},
+		    hit = #{hit},
+		    productImg1 = #{productImg1},
+		    productImg2 = #{productImg2},
+		    productImg3 = #{productImg3},
+		    productImg4 = #{productImg4},
+		    productImg5 = #{productImg5},
+		    productImg6 = #{productImg6},
+		    productImg7 = #{productImg7},
+		    productImg8 = #{productImg8},
+		    productImg9 = #{productImg9},
+		    productImg10 = #{productImg10}
+		WHERE productId = #{productId}
+	</update>
+
+	<!-- 상품 삭제 -->
+	<delete id="delete" parameterType="product">
+		delete from product where productId = #{productId};
+	</delete>
+	
+	 <!-- 선택된 상품들을 삭제하는 쿼리 -->
+    <delete id="selectDelete" parameterType="productIds">
+        delete from product where productId in
+        <foreach item="productId" index="index" collection="productIdList" open="(" separator="," close=")">
+            #{productId}
+        </foreach>
+    </delete>
+    
+    <!-- 문의 목록 불러오기 -->
+	<select id="boardLoad" resultType="productBoard">
+		SELECT * FROM productBoard where parentBoardId is null ORDER BY response, boardCreatedAt desc;
+	</select>
+	
+	<!-- 문의 삭제 -->
+	<delete id="boardDelete" parameterType="productBoard">
+		delete from productBoard where boardId = #{boardId};
+	</delete>
+	
+	    <!-- 문의 목록 불러오기 -->
+	<select id="boardLoadYetReply" resultType="productBoard">
+		select * from productBoard where response=0 and parentBoardId is null order by boardCreatedAt desc;
+	</select>
+	<select id="boardLoadAllReply" resultType="productBoard">
+		SELECT * FROM productBoard where parentBoardId is null ORDER BY response, boardCreatedAt desc;
+	</select>
+	<select id="boardLoadCompleteReply" resultType="productBoard">
+		select * from productBoard where response=1 and parentBoardId is null order by boardCreatedAt desc;
+	</select>
+	<!-- response응답이 0인게 하나라도있는지 확인 -->
+	<select id="checkComment" resultType="java.lang.String">
+        SELECT COUNT(*) FROM productBoard WHERE response=0;
+	</select>
+	
+	<!-- 답변 목록 불러오기 -->
+	<select id="replyCheck" parameterType="int" resultType="productBoard">
+		SELECT * FROM productBoard where parentBoardId=#{int} ORDER BY boardCreatedAt desc;
+	</select>
+	<!-- 답변 수정 -->
+	<update id="replyEdit" parameterType="java.util.Map">
+    UPDATE productBoard
+    SET boardContent=#{boardContent}
+    WHERE boardId=#{boardId};
+	</update>
+</mapper>

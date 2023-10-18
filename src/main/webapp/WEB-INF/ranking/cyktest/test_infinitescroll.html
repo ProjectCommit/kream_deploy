@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Insert title here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한스크롤 예제</title>   
+    <style>
+        html, body{margin: 0;}
+        section .box{
+            height: 500px; background: tomato; color: white;
+            box-sizing: border-box; padding: 30px 10px;
+        }
+        section .box:nth-child(2n){ /*이 선택자는 section 요소 하위에 있는 클래스가 box인 요소 중에서 짝수 번째(2n) 요소들을 선택합니다. */
+          
+            background: teal;
+        }
+        .button{
+          width: 100px; height: 50px; background: gold; color: white;
+        }
+    </style>
+</head>
+<body>
+  <section>
+    <div class="box">
+      1번째 블록
+    </div>
+    <div class="box">
+      2번째 블록
+      <input type="button" class="button" value="버튼">
+    </div>
+    
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script>
+   
+      var count = 2; 
+      window.onclick = function(event){
+        var target = event.target;
+
+        var classList = target.classList;
+
+        if(classList.contains('button')){
+          //기존 버튼 요소 삭제
+          var existingButton = target.parentElement.querySelector('.button');
+          if(existingButton){
+            existingButton.remove();
+          }
+
+
+          var toAdd = document.createElement('div'); 
+          toAdd.classList.add("box");
+          toAdd.textContent = `${++count}번째  블록`
+          var button = document.createElement('input');
+          button.type = "button";
+          button.classList.add("button");
+          button.value = "버튼";
+          toAdd.appendChild(button);
+          if(count<10){
+            document.querySelector('section').appendChild(toAdd); 
+            
+          }
+        }
+      }
+
+      // var count = 2; 
+      // window.onscroll = function(){ .innerHeight 사용자가 보고있는 영역의 높이 .scrollY= 스크롤이 세로로 얼마나 이동했는지 알려줌.
+      //   if((window.innerHeight + window.scrollY) >= document.body.offsetHeight){ offsetHeight 요소의 실제높이 = 보이는 영역 + 가려진 영역
+      //     var toAdd = document.createElement('div'); 
+      //     toAdd.classList.add("box");
+      //     toAdd.textContent = `${++count}번째  블록`
+      //     if(count!=10){
+      //       document.querySelector('section').appendChild(toAdd); 
+      //     }
+      //   }
+        
+      // }
+      
+  </script>
+</body>
+</html>

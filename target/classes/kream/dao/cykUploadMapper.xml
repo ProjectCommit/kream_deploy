@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cykUploadSQL">
+	<!-- <insert id="upload" parameterType="kream.bean.UserImageDTO">
+		insert into userimage ( IMAGENAME , IMAGECONTENT , IMAGE1 ,PRICE)  values( #{imageName}, #{imageContent}, #{image1} ,#{price})
+	</insert> -->
+	
+	<select id="getUpload_list_AJax" resultType="product">
+		select
+		row_number() over(order by hit desc) as hit, productName, productExplain,productImg1 , category, price,productId
+		from product
+		where gender = '남성'  and category= '신발';
+	</select>	
+
+	<select id="getUpload_list_AJax2" resultType="product">
+		select
+		row_number() over(order by hit desc) as hit, productName, productExplain,productImg1 , category, price ,productId
+		from product
+		where gender = '여성'  and category= '신발';
+	</select>	
+	
+	<select id="getUpload_list_AJax3" resultType="product">
+		select
+		row_number() over(order by hit desc) as hit, productName, productExplain,productImg1 , category, price ,productId
+		from product
+		where category in( '상의','하의','아우터') and gender='여성';
+	</select>
+
+	 <!-- 관심상품등록 -->
+ 	<insert id="addWishLists" parameterType="kream.bean.WishListsDTO" >
+		insert  into  wishLists  (productId, email )values (#{productId},#{email});
+ 	</insert> 
+</mapper> 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+    <select id="getProductList" parameterType="java.lang.String" resultType="product">
+        select * from product where productId = ${productId}
+    </select>
+    <select id="getProductColor" parameterType="java.lang.String" resultType="java.lang.String">
+        select productColor from productoption where productId = #{productId} group by productColor
+    </select>
+    <select id="getProductSize" parameterType="java.util.Map" resultType="java.util.Map">
+        select size, stock, quickShip from productoption where productId = #{productId} and productColor = #{productColor}
+    </select>
+    <select id="getCategoryRecomend" parameterType="java.util.Map" resultType="java.util.Map">
+        <![CDATA[
+        SELECT p.category2, p.productImg1, p.productId, p.productName, p.brand, p.productExplain, p.price, w.wish
+        FROM product AS p JOIN (SELECT productId, COUNT(*) AS wish FROM wishlists GROUP BY productId) AS w
+        ON p.productId = w.productId
+        WHERE p.productId <>#{productId} AND p.category2 = #{category2} AND p.gender = #{gender}
+        ORDER BY w.wish DESC LIMIT 10;
+        ]]>
+    </select>
+
+    <select id="getBrandRecomend" parameterType="java.util.Map" resultType="java.util.Map">
+        <![CDATA[
+        SELECT p.category2, p.productImg1, p.productId, p.productName, p.brand, p.productExplain, p.price, w.wish
+        FROM product AS p JOIN (SELECT productId, COUNT(*) AS wish FROM wishlists GROUP BY productId) AS w
+        ON p.productId = w.productId
+        WHERE p.productId <>#{productId} AND p.brand = #{brand}
+        ORDER BY w.wish DESC LIMIT 10;
+        ]]>
+    </select>
+    <select id="getBoardList" parameterType="java.util.Map" resultType="productBoard">
+        select * from productBoard where productId = #{productId} and parentBoardId is null order by boardCreatedAt desc LIMIT ${startNum}, 5;
+    </select>
+    <select id="getReplyList" parameterType="java.util.Map" resultType="productBoard">
+        select * from productBoard where productId = #{productId} and parentBoardId = #{parentBoardId} order by boardCreatedAt
+    </select>
+    <select id="getTotalBoard" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select count(*) from productBoard where productId = #{productId} and parentBoardId is null
+    </select>
+    <update id="hitUpdate" parameterType="java.lang.String">
+        update product set hit = hit+1 where productId = #{productId}
+    </update>
+    <insert id="setProductBoard" parameterType="productBoard">
+        insert into productBoard(productId, boardTitle, boardContent, nickname, security) values(#{productId}, #{boardTitle}, #{boardContent}, #{nickname}, #{security})
+    </insert>
+    <insert id="setProductReply" parameterType="java.util.Map">
+insert into productBoard(productId, parentBoardId, boardContent, nickname, response) values(#{productId}, #{boardId}, #{boardContent}, #{nickname}, (select admin from user where nickname = #{nickname}));    </insert>
+    <update id="updateProductBoard" parameterType="java.lang.String">
+        UPDATE productBoard SET response = 1 WHERE boardId = #{boardId};
+    </update>
+    <insert id="setWishList" parameterType="java.util.Map">
+        insert into wishlists values(#{productId}, #{userEmail})
+    </insert>
+    <delete id="deleteWishList" parameterType="java.util.Map">
+        delete from wishlists where productId = #{productId} and Email = #{userEmail}
+    </delete>
+    <select id="countWishList" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select count(*) from wishlists where productId = #{productId}
+    </select>
+    <select id="isWishList" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select count(*) from wishlists where productId = #{productId} and Email = #{userEmail}
+    </select>
+</mapper>

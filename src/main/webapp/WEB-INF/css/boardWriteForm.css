@@ -1,0 +1,45 @@
+#mainContainer {
+    margin: 10px;
+    width: 460px;
+    border: 1px solid #bbbbbb;
+    padding: 20px;
+    border-radius: 10px;
+    height: 350px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    background-color: #edf0f5;
+}
+
+#titleDiv, #boardContentDiv {
+    display: flex;
+}
+
+#title {
+    width: 250px;
+    font-size: 1.1em;
+    border-radius: 3px;
+}
+
+#boardContent {
+    width: 440px;
+    margin-top: 10px;
+    height: 250px;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+#btnDiv button {
+    margin: 0 10px;
+    width: 60px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+}
+
+#securityDiv {
+    margin: 0 0 0 30px;
+    width: 130px;
+    height: 25px;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="order">
+    <insert id="reserve" parameterType="order">
+        insert into orders(productId, email, productColor, size, stock, totalPrice, quickOrder, orderState)
+        values(#{productId}, #{email}, #{productColor}, #{size}, #{stock}, #{totalPrice}, #{quickOrder}, 1)
+    </insert>
+</mapper>

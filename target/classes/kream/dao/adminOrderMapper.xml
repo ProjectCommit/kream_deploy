@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="adminOrderSQL">
+    <resultMap id="orderResult" type="kream.bean.OrderDTO">
+	    <result column="orderId" property="orderId"/>
+	    <result column="productId" property="productId"/>
+	    <result column="parentId" property="parentId"/>
+	    <result column="email" property="email"/>
+	    <result column="productColor" property="productColor"/>
+	    <result column="size" property="size"/>
+	    <result column="stock" property="stock"/>
+	    <result column="price" property="price"/>
+	    <result column="phone" property="phone"/>
+	    <result column="quickOrder" property="quickOrder"/>
+	    <result column="address" property="address"/>
+	    <result column="address2" property="address2"/>
+	    <result column="zipcode" property="zipcode"/>
+	    <result column="orderState" property="orderState"/>
+	    <result column="receiverName" property="receiverName"/>
+	    <result column="receiverPhone" property="receiverPhone"/>
+	    <result column="orderDate" property="orderDate"/>
+	</resultMap>
+
+	
+	    <!-- 상품목록불러오기 -->
+	<select id="load" resultType="kream.bean.OrderDTO">
+		select * from orders where orderState=1;
+	</select>
+
+	    <!-- 발주확인 -->
+	<update id="orderCheck" parameterType="int">
+	    update orders set orderState=2 where orderId=#{orderId};
+	</update>
+	    <!-- 발주취소 -->
+	<update id="orderCancle" parameterType="int">
+	    update orders set orderState=3 where orderId=#{orderId};
+	</update>
+	
+	    <!-- 발주 목록불러오기 -->
+	<select id="loadOrderCheck" resultType="kream.bean.OrderDTO">
+		select * from orders where orderState=2;
+	</select>
+
+	    <!-- 배송시작 -->
+	<update id="shippingOrder" parameterType="int">
+	    update orders set orderState=4 where orderId=#{orderId};
+	</update>
+	
+	    <!-- 배송 목록불러오기 -->
+	<select id="loadShipping" resultType="kream.bean.OrderDTO">
+		select * from orders where orderState=4;
+	</select>
+</mapper>

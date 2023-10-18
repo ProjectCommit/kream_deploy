@@ -1,0 +1,480 @@
+@charset "UTF-8";
+
+.container.my .snb_area+div {
+    flex: 1;
+}
+.container.my .content_area {
+    min-height: 380px;
+    overflow: hidden;
+}
+.my-page-content {
+    flex: 1;
+}
+
+.my_addressbook {
+    min-height: 315px;
+}
+
+
+.border {
+    border: none !important;
+}
+/* .content_title.border {
+    border-bottom: 3px solid #222 !important;
+    padding-bottom: 16px;
+} */
+.content_title {
+    display: flex;
+}
+.title {
+    font-size: 24px;
+    letter-spacing: -.36px;
+}
+.title>h3 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+}
+
+
+.btn_box {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 30px;
+}
+.btn_box .btn.btn_add {
+    border: 1px solid #222;
+    border-radius: 10px;
+    font-size: 12px;
+    height: 34px;
+    letter-spacing: -.06px;
+    line-height: 32px;
+    margin-right: 0;
+    padding: 0 14px;
+}
+.btn_box .btn {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: -.21px;
+    margin-right: -6px;
+    padding: 0 6px;
+}
+.btn {
+    align-items: center;
+    background-color: #fff;
+    color: rgba(34,34,34,.8);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+.basic {
+    border-bottom: 2px solid #222;
+    padding: 30px 0 29px;
+}
+.my_item {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.my_item .info_bind {
+    margin-right: 24px;
+}
+.address_info {
+    line-height: 17px;
+}
+.is_active .address_info .name {
+    font-weight: 700;
+}
+.address_info .name {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.15px;
+    line-height: 20px;
+    vertical-align: top;
+}
+.address_info .mark {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: -.06px;
+    line-height: 14px;
+    margin-left: 4px;
+    margin-top: 0;
+    padding: 3px 6px;
+    vertical-align: top;
+}
+.address_info .phone {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    padding-top: 5px;
+    font-weight: normal;
+}
+.address_info .phone .hyphen {
+    background-color: #000;
+    display: inline-flex;
+    height: 1px;
+    margin-left: 4px;
+    margin-right: 2px;
+    width: 4px;
+}
+.address_info .phone .dot {
+    margin-top: -5px;
+    white-space: nowrap;
+}
+.address_info .phone .dot:after {
+    background-color: #222;
+    border-radius: 100%;
+    content: "";
+    display: inline-flex;
+    height: 5px;
+    margin-left: 2px;
+    width: 5px;
+}
+.address_info .address_box {
+    font-size: 14px;
+    letter-spacing: -.21px;
+    padding-top: 4px;
+    font-weight: normal;
+}
+
+.basic .btn_bind {
+    margin-top: 12px;
+}
+
+.btn_bind {
+    margin-left: auto;
+}
+.btn_bind .btn {
+    padding-left: 11px;
+    padding-right: 12px;
+}
+
+.outlinegrey {
+    border: 1px solid #d3d3d3;
+    color: rgba(34,34,34,.8);
+}
+.small {
+    border-radius: 10px;
+    font-size: 12px;
+    height: 34px;
+    letter-spacing: -.06px;
+    padding: 0 14px;
+}
+.btn {
+    align-items: center;
+    background-color: #fff;
+    color: rgba(34,34,34,.8);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn_bind .btn+.btn {
+    margin-left: 8px;
+}
+
+.my .empty_area {
+    padding: 90px 0;
+}
+
+/* 배송지 목록이 없을 때 */
+.empty_area {
+    padding: 81px 0 45px;
+    text-align: center;
+}
+
+.empty_area .desc {
+    color: rgba(34,34,34,.5);
+    font-size: 13px;
+    letter-spacing: -.07px;
+}
+
+.my .empty_area .btn {
+    margin-top: 12px;
+}
+
+.empty_area .btn {
+    margin-top: 8px;
+}
+
+/* 배송지 추가모달창 */
+.layer_delivery .layer_container {
+    width: 520px;
+}
+
+@media (max-width: 915px)
+.layer_container {
+    max-height: 100%;
+}
+.layer_container {
+	display: none;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 448px;
+}
+
+
+.btn_layer_close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+}
+[class*=ico-] {
+    height: 24px;
+    width: 24px;
+}
+
+
+.layer_header .title {
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.27px;
+    letter-spacing: -.15px;
+    line-height: 22px;
+    min-height: 44px;
+    padding: 18px 50px;
+    text-align: center;
+}
+
+
+.layer_delivery .delivery_bind {
+    padding: 0 32px;
+}
+
+.layer_delivery .input_box:first-of-type {
+    padding-top: 0;
+}
+
+.layer_delivery .input_box {
+    padding-top: 16px;
+}
+.input_box {
+    padding: 10px 0 14px;
+    position: relative;
+}
+
+.has_error .input_title {
+    color: #f15746;
+}
+
+.input_title {
+    font-size: 13px;
+    letter-spacing: -.07px;
+    line-height: 18px;
+}
+
+.input_item {
+    position: relative;
+}
+
+.has_error .input_error {
+    color: #f15746;
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    position: absolute;
+}
+
+.input_error {
+    display: none;
+}
+
+.input_txt {
+    border-bottom: 1px solid #ebebeb;
+    font-size: 15px;
+    letter-spacing: -.15px;
+    line-height: 22px;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.btn.btn_zipcode {
+    bottom: 8px;
+    position: absolute;
+    right: 0;
+}
+
+
+.layer_delivery .layer_btn {
+    padding-top: 32px;
+}
+
+.layer_btn {
+    display: flex;
+    justify-content: center;
+    padding: 24px 32px 32px;
+}
+
+.medium {
+    border-radius: 12px;
+    font-size: 14px;
+    height: 42px;
+    letter-spacing: -.14px;
+    padding: 0 18px;
+}
+
+.layer_btn .btn+.btn {
+    margin-left: 8px;
+}
+
+.layer_btn .btn {
+    width: 120px;
+}
+.solid.disabled, .solid:disabled {
+    background-color: #ebebeb;
+    color: #fff;
+    cursor: default;
+}
+.solid {
+    background-color: #222;
+    color: #fff !important;
+    font-weight: 700;
+}
+
+.btn.btn_save:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 페이징*/
+.pagination {
+    padding: 28px 0;
+}
+
+.pagination_box {
+    font-size: 0;
+    position: relative;
+    text-align: center;
+}
+
+.pagination_box.first .prev_btn_box, .pagination_box.last .next_btn_box {
+    display: none;
+}
+
+.prev_btn_box {
+    margin-right: 25px;
+}
+
+.next_btn_box, .prev_btn_box {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.next_btn_box .btn_arr, .prev_btn_box .btn_arr {
+    height: 24px;
+    padding: 3px;
+    width: 24px;
+}
+
+.next_btn_box .btn_arr+.btn_arr, .prev_btn_box .btn_arr+.btn_arr {
+    margin-left: 5px;
+}
+
+[class*=arr-page-] {
+    height: 22px;
+    width: 18px;
+}
+
+.page_bind {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.btn_page.active {
+    color: #222;
+    font-weight: 700;
+}
+
+.btn_page {
+    color: rgba(34,34,34,.5);
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 8px;
+}
+
+
+.pagination_box.first .prev_btn_box, .pagination_box.last .next_btn_box {
+    display: none;
+}
+
+.next_btn_box {
+    margin-left: 25px;
+}
+
+
+/* 공통 */
+.container.my {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 40px 40px 160px;
+}
+
+a, a:active, a:focus, a:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,.1);
+    color: inherit;
+}
+input, textarea {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    padding: 0;
+    resize: none;
+}
+img, video {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    border: 0;
+    -webkit-user-select: none!important;
+    -moz-user-select: none!important;
+    user-select: none!important;
+    -webkit-user-select: none;
+    vertical-align: top;
+}
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    padding: 0;
+}
+*, :after, :before {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
